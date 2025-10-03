@@ -1084,6 +1084,7 @@ class IGService:
 
     def create_open_position(
         self,
+        deal_reference,
         currency_code,
         direction,
         epic,
@@ -1107,6 +1108,7 @@ class IGService:
         self.trading_rate_limit_pause_or_pass()
         version = "2"
         params = {
+            "dealReference": deal_reference,
             "currencyCode": currency_code,
             "direction": direction,
             "epic": epic,
